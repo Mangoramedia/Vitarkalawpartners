@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --color-legal-deep-blue: #0a1128;
+  --color-legal-ink: #050505;
+  --color-legal-gold: #c5a059;
+  --color-legal-muted: #a0a0a0;
+  --color-legal-beige: #e5e0d8;
+  --color-legal-white: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply bg-legal-ink text-legal-white font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass-nav {
+  @apply bg-legal-ink/90 backdrop-blur-md border-b border-white/5;
+}
+
+.btn-primary {
+  @apply bg-legal-gold text-legal-ink px-8 py-3 rounded-none font-bold uppercase tracking-widest transition-all hover:bg-white hover:text-legal-ink;
+}
+
+.btn-outline {
+  @apply border border-legal-gold text-legal-gold px-8 py-3 rounded-none font-bold uppercase tracking-widest transition-all hover:bg-legal-gold hover:text-legal-ink;
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at center, #0a1128 0%, #050505 100%);
+}
